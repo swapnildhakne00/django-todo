@@ -11,26 +11,7 @@ pipeline {
 
     stages{
  
-	stage('CODE ANALYSIS with SONARQUBE') {
-
-            environment {
-                scannerHome = tool 'mysonarscanner4'
-            }
-
-            steps {
-                withSonarQubeEnv('sonarcloud') {
-                    sh '''${scannerHome}/bin/sonar-scanner  \
-                   -Dsonar.organization=swapnildhakne00 \
-                   -Dsonar.projectKey=myfirstprojenkins \
-                   -Dsonar.sources=. \
-                   -Dsonar.host.url=https://sonarcloud.io'''
-                }
-
-                timeout(time: 10, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
+	
 
         stage('Building image') {
             steps{
