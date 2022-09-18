@@ -27,13 +27,12 @@ pipeline {
             }
         }
         
-       stage('Deploy Image') {
+       stage('Push Images to DockerHub') {
           steps{
             script {
               docker.withRegistry( '', registryCredential ) {
                 dockerImage.push("$BUILD_NUMBER")
-                dockerImage.push('latest')
-		dockerImage.push('newer')
+                dockerImage.push('latest')		
               }
             }
           }
