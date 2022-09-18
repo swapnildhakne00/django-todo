@@ -9,8 +9,7 @@ pipeline {
         registryCredential = 'dockerhubcreds'
     }
 
-    stages{
- 
+    stages{ 
 	
 
         stage('Building image') {
