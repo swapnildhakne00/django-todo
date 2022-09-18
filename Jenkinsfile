@@ -20,7 +20,13 @@ pipeline {
               }
             }
         }
-        
+        stage('listing images') {
+            steps{
+               
+              sh  'docker images'
+              
+            }
+        }
         
 
         
