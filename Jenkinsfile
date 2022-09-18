@@ -6,7 +6,7 @@ pipeline {
 */
     environment {
         registry = "swapnilsrd/vprofilecicd"
-        registryCredential = 'dockerhub_id'
+        registryCredential = 'dockerhubcreds'
     }
 
     stages{
