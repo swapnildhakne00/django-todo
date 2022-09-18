@@ -28,17 +28,17 @@ pipeline {
             }
         }
         
-       stage('Push Image to DockerHub') {
+       stage('Deploy Image') {
           steps{
             script {
-              docker.withRegistry( 'https://hub.docker.com/', registryCredential) {
-	      dockerImage.push(":$BUILD_NUMBER")
-              dockerImage.push("latest")
+              docker.withRegistry( '', registryCredential ) {
+                dockerImage.push("$BUILD_NUMBER")
+                dockerImage.push('latest')
               }
             }
           }
         }
-        
+       
         
 
     }
