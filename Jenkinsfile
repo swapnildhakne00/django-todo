@@ -3,7 +3,7 @@ pipeline {
 /*
 	
 */
-    environment {
+   environment {
         registry = "swapnilsrd/vprofilecicd"
         registryCredential = 'dockerhubcreds'
     }
