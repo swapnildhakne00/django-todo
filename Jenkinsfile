@@ -44,7 +44,7 @@ pipeline {
         }
        stage('Kubernetes Deploy') {
 	             steps {
-                    sh "kubectl create deployment todo-app --image=${registry}:${BUILD_NUMBER}"
+                    sh "kubectl create deployment todo-app --image=${registry}"
             }
         }
 
