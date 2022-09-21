@@ -42,6 +42,11 @@ pipeline {
             sh "docker rmi $registry:$BUILD_NUMBER"
           }
         }
+       stage('Kubernetes Deploy') {
+	             steps {
+                    sh "kubectl create deployment todo-app --image=${registry}:${BUILD_NUMBER}"
+            }
+        }
 
     }
 
