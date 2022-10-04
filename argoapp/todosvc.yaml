@@ -10,7 +10,7 @@ spec:
   - port: 8001
     protocol: TCP
     targetPort: 8001
-    NodePort: 31466
+    nodePort: 31466
   selector:
     app: todo-app
   type: NodePort
