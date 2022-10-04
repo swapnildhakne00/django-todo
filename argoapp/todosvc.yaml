@@ -12,6 +12,6 @@ spec:
     targetPort: 8001
   selector:
     app: todo-app
-  type: NodePope
+  type: NodePort
 status:
   loadBalancer: {}
