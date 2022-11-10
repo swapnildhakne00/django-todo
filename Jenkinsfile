@@ -45,7 +45,7 @@ pipeline {
        stage('Kubernetes Deploy') {
 	             steps {
                     #sh "kubectl create deployment todo-app --image ${registry}"
-	             echo "this will sure"
+	             echo "this wil"
             }
         }
 
